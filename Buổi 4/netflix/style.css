@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.login {
+  min-height: 100vh;
+  padding-top: 150px;
+  background-image: linear-gradient(#0000003b, #0000003b),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/3e521d6d-a53b-4c3f-a85f-dd77c06f7ac7/54cd5a62-8b2a-44f8-a55a-4c1a62028228/VN-vi-20220425-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+}
+
+.login ~ .element {
+}
+.login + .element {
+}
+
+.login-form {
+  padding: 60px 68px 40px;
+  background: black;
+  width: 450px;
+  min-height: 660px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.login-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.login-input {
+  height: 50px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.login-input::placeholder {
+  opacity: 0;
+}
+
+.login-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  transition: all .2s ease;
+}
+.login-input:focus ~ .login-placeholder{ 
+  transform: translateY(calc(-50% + -10px));
+  font-size: 12px;
+}
+
+.login-input:not(:placeholder-shown) ~ .login-placeholder{ 
+  transform: translateY(calc(-50% + -10px));
+  font-size: 12px;
+}
